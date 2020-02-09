@@ -110,9 +110,9 @@ def plot_image(i, predictions_array, true_label, img):
   else:
     color = 'red'
 
-  plt.xlabel("{} {:2.0f}% ({})".format(class_names[predicted_label],
+  plt.xlabel("{} {:2.0f}% ({})".format(class_cat[predicted_label],
                                 100*np.max(predictions_array),
-                                class_names[true_label]),
+                                class_cat[true_label]),
                                 color=color)
 
 def plot_value_array(i, predictions_array, true_label):
@@ -126,3 +126,36 @@ def plot_value_array(i, predictions_array, true_label):
 
   thisplot[predicted_label].set_color('red')
   thisplot[true_label].set_color('blue')
+
+# Verify predictions
+
+i = 0
+plt.figure(figsize=(6,3))
+plt.subplot(1,2,1)
+plot_image(i, predictions[i], test_labels, test_images)
+plt.subplot(1,2,2)
+plot_value_array(i, predictions[i], test_labels)
+plt.show()
+
+
+i = 12
+plt.figure(figsize=(6,3))
+plt.subplot(1,2,1)
+plot_image(i, predictions[i], test_labels, test_images)
+plt.subplot(1,2,2)
+plot_value_array(i, predictions[i], test_labels)
+plt.show()
+
+# Plot the first X test images, their predicted labels, and their true labels.
+# color correct predictions in blue and incorrect predictions in red.
+num_rows = 5
+num_cols = 3
+num_images = num_rows * num_cols
+plt.figure(figsize=(2*2*num_cols, 2*num_rows))
+for i in range(num_images):
+    plt.subplot(num_rows, 2*num_cols, 2*i+1)
+    plot_image(i, predictions[i], test_labels, test_images)
+    plt.subplot(num_rows, 2*num_cols, 2*i+2)
+    plot_value_array(i, predictions[i], test_labels)
+    plt.tight_layout()
+    plt.show()
