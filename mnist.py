@@ -159,3 +159,21 @@ for i in range(num_images):
     plot_value_array(i, predictions[i], test_labels)
     plt.tight_layout()
     plt.show()
+
+''' Use the trained model '''
+# grab an image from the test dataset
+img = test_images[1]
+print(img.shape)
+
+# add an image to the bach where it's the only number
+img = (np.expand_dims(img, 0))
+print(img.shape)
+
+# Now predict the correct label for this image
+predictions_signal = model.predict(img)
+print(predictions_signal)
+
+plot_value_array(1, predictions_signal[0], test_labels)
+_ = plt.xticks(range(10), class_cat, rotation=45)
+
+np.argmax(predictions_signal[0])
