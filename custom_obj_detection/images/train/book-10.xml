@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>book-10.jpg</filename>
+	<path>/home/ioannis/Documents/python_projects/work_space/custom_obj_detection/images/book-10.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>book</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>137</xmin>
+			<ymin>17</ymin>
+			<xmax>795</xmax>
+			<ymax>600</ymax>
+		</bndbox>
+	</object>
+</annotation>

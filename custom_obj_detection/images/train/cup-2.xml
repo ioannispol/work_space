@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>cup-2.jpg</filename>
+	<path>/home/ioannis/Documents/python_projects/work_space/custom_obj_detection/images/cup-2.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cup</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>292</xmin>
+			<ymin>195</ymin>
+			<xmax>726</xmax>
+			<ymax>535</ymax>
+		</bndbox>
+	</object>
+</annotation>
